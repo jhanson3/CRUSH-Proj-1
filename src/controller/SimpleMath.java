@@ -15,12 +15,10 @@ package controller;
 import view.Gui;
 
 public class SimpleMath {
-	
-	static Gui gui;
 
 	public static void main(String[] args) {
 		
-		gui = new Gui();
+		Gui gui = new Gui();
 		gui.setVisible(true);
 	}
 
