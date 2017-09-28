@@ -9,6 +9,7 @@
 
 package view;
 
+import java.awt.Color;
 import java.awt.Container;
 
 import javax.swing.JButton;
@@ -23,6 +24,7 @@ public class Gui extends JFrame{
 	private Container cp;
 	private JButton triangle;
 	
+	// public constructor for the GUI
 	public Gui() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(1000, 1000);
@@ -30,10 +32,13 @@ public class Gui extends JFrame{
 		this.setTitle("Simple Math");
 		this.setLayout(null);
 		cp = new Container();
+		cp.setLocation(0, 50);
+		this.add(cp);
 		
 		initializeViewButtons();
 	}
-
+	
+	// This method initializes the buttons used to change the shape
 	private void initializeViewButtons() {
 		triangle = new JButton("Triangle");
 		triangle.setEnabled(false);
