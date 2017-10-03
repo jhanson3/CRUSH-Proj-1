@@ -9,11 +9,13 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -22,7 +24,7 @@ public class TriangleView extends JPanel{
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField height, length, hyp;
-	private JTextPane heightPane, lengthPane, hypPane;
+	private JTextArea heightArea, lengthArea, hypArea;
 	
 
 	public TriangleView() {
@@ -40,23 +42,47 @@ public class TriangleView extends JPanel{
 
 	private void initializeTextFields() {
 		
+		// Create a new font
+		Font myFont = new Font(Font.SERIF, Font.BOLD, 24);
+		
 		// set the height text field
+		heightArea = new JTextArea();
+		heightArea.setFont(myFont);
+		heightArea.setText("Enter Height:");
+		heightArea.setSize(200, 30);
+		heightArea.setLocation(10, 10);
+		heightArea.setBackground(Color.GREEN);
 		height = new JTextField();
 		height.setSize(200, 30);
 		height.setLocation(250, 10);
 		this.add(height);
+		this.add(heightArea);
 		
 		// set the length text field
+		lengthArea = new JTextArea();
+		lengthArea.setFont(myFont);
+		lengthArea.setText("Enter Length:");
+		lengthArea.setSize(200, 30);
+		lengthArea.setLocation(10, 50);
+		lengthArea.setBackground(Color.GREEN);
 		length = new JTextField();
 		length.setSize(200, 30);
 		length.setLocation(250, 50);
 		this.add(length);
+		this.add(lengthArea);
 		
-		// set the hypo text field
+		// set the hypotenuse text field
+		hypArea = new JTextArea();
+		hypArea.setFont(myFont);
+		hypArea.setText("Enter Hypotenuse:");
+		hypArea.setSize(200, 30);
+		hypArea.setLocation(10, 90);
+		hypArea.setBackground(Color.GREEN);
 		hyp = new JTextField();
 		hyp.setSize(200, 30);
 		hyp.setLocation(250, 90);
 		this.add(hyp);
+		this.add(hypArea);
 		
 	}
 
