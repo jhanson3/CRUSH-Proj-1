@@ -21,8 +21,8 @@ public class Gui extends JFrame{
 	private static final long serialVersionUID = 4938045293212738100L;
 
 	private JPanel currView;
-	private Container cp;
 	private JButton triangle;
+	private TriangleView triView;
 	
 	// public constructor for the GUI
 	public Gui() {
@@ -31,9 +31,12 @@ public class Gui extends JFrame{
 		this.setLocation(100, 40);
 		this.setTitle("Simple Math");
 		this.setLayout(null);
-		cp = new Container();
-		cp.setLocation(0, 50);
-		this.add(cp);
+		
+		// initialize triangle view
+		triView = new TriangleView();
+		currView = triView;
+		
+		this.add(currView);
 		
 		initializeViewButtons();
 	}
