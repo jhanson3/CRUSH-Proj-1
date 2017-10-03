@@ -13,6 +13,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -24,19 +25,46 @@ public class TriangleView extends JPanel{
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField height, length, hyp;
-	private JTextArea heightArea, lengthArea, hypArea;
+	private JTextArea heightArea, lengthArea, hypArea, answer;
+	private JButton hgtButton, lgtButton, hypButton;
 	
 
 	public TriangleView() {
 		
 		this.setLayout(null);
 		this.setLocation(0, 50);
-		this.setSize(1000, 950);
+		this.setSize(1000, 400);
 		this.setBackground(Color.GREEN);
 		
 		initializeTextFields();
+		initializeButtons();
 		
 		this.setLayout(null);
+		
+	}
+
+	private void initializeButtons() {
+		
+		// Initialize height button
+		hgtButton = new JButton("Calculate Height");
+		hgtButton.addActionListener(new ButtonListener());
+		hgtButton.setSize(200, 30);
+		hgtButton.setLocation(450, 10);
+		this.add(hgtButton);
+		
+		// Initialize length button
+		lgtButton = new JButton("Calculate length");
+		lgtButton.addActionListener(new ButtonListener());
+		lgtButton.setSize(200, 30);
+		lgtButton.setLocation(450, 50);
+		this.add(lgtButton);
+		
+		// Initialize height button
+		hypButton = new JButton("Calculate Hypotenuse");
+		hypButton.addActionListener(new ButtonListener());
+		hypButton.setSize(200, 30);
+		hypButton.setLocation(450, 90);
+		this.add(hypButton);
 		
 	}
 
@@ -83,6 +111,23 @@ public class TriangleView extends JPanel{
 		hyp.setLocation(250, 90);
 		this.add(hyp);
 		this.add(hypArea);
+		
+	}
+	
+	private class ButtonListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			
+			if (arg0.getSource() == hgtButton) {
+				
+			} else if (arg0.getSource() == lgtButton) {
+				
+			} else if (arg0.getSource() == hypButton) {
+				
+			}
+			
+		}
 		
 	}
 

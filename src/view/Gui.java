@@ -27,7 +27,7 @@ public class Gui extends JFrame{
 	// public constructor for the GUI
 	public Gui() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(1000, 1000);
+		this.setSize(1000, 450);
 		this.setLocation(100, 40);
 		this.setTitle("Simple Math");
 		this.setLayout(null);
