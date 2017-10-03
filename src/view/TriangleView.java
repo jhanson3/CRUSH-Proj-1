@@ -13,12 +13,14 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.swing.border.Border;
 
 public class TriangleView extends JPanel{
 	
@@ -33,7 +35,7 @@ public class TriangleView extends JPanel{
 		
 		this.setLayout(null);
 		this.setLocation(0, 50);
-		this.setSize(1000, 400);
+		this.setSize(1000, 300);
 		this.setBackground(Color.GREEN);
 		
 		initializeTextFields();
@@ -111,6 +113,15 @@ public class TriangleView extends JPanel{
 		hyp.setLocation(250, 90);
 		this.add(hyp);
 		this.add(hypArea);
+		
+		// set the answer text area
+		answer = new JTextArea();
+		answer.setFont(myFont);
+		answer.setText("Answer:");
+		answer.setSize(300, 30);
+		answer.setLocation(300, 150);
+		answer.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		this.add(answer);
 		
 	}
 	
