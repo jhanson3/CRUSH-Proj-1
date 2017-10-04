@@ -58,7 +58,7 @@ public class TriangleView extends JPanel{
 		lgtButton.setLocation(450, 50);
 		this.add(lgtButton);
 		
-		// Initialize height button
+		// Initialize hypotenuse button
 		hypButton = new JButton("Calculate Hypotenuse");
 		hypButton.addActionListener(new ButtonListener());
 		hypButton.setSize(200, 30);
