@@ -129,10 +129,20 @@ public class TriangleView extends JPanel{
 			
 			if (arg0.getSource() == hgtButton) {
 				
+				//TODO: student code goes here
+				
+				// stop student code
+				
 			} else if (arg0.getSource() == lgtButton) {
 				
+				//TODO: student code goes here
+				
+				// stop student code
 			} else if (arg0.getSource() == hypButton) {
 				
+				//TODO: student code goes here
+				
+				// stop student code
 			}
 			
 		}
